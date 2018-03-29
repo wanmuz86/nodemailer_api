@@ -26,12 +26,12 @@ router.post('/sendemail', function(req,res){
 
 	nodemailer.createTestAccount(function(err,account){
  transporter = nodemailer.createTransport({
-	host:'smtp.gmail.com',
-	port:587,
+	host:process.env.HOST,
+	port:process.env.PORT,
 	secure:false,
 	auth:{
-		user :"wanmuz.ada@gmail.com",
-		pass: "wbzsseonkjrdkrpm"
+		user :process.env.USER,
+		pass: process.env.PASS
 	}
 	})
 
