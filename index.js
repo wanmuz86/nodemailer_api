@@ -27,7 +27,7 @@ router.post('/sendemail', function(req,res){
 	nodemailer.createTestAccount(function(err,account){
  transporter = nodemailer.createTransport({
 	host:process.env.HOST,
-	port:process.env.PORT,
+	port:process.env.EPORT,
 	secure:false,
 	auth:{
 		user :process.env.USER,
